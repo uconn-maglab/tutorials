@@ -39,18 +39,86 @@ Start a tree with the command
 Trees are written in bracket notation. You can denote a node label by preceding 
 it with a period. Any other text is taken to be the end of the branch.
 
-\subsection{Example}
+\subsection{Simple Example}
 
-Take, for example, the phrase "the pretty tree":
+Take, for example, the phrase ``the pretty tree'':
 
 \begin{verbatim}
 	\Tree [.NP [.Det the ] [.N [.Adj pretty ] [.N tree ] ] ]
 \end{verbatim}
 
+Looks like:
+
 \Tree [.NP [.Det the ] [.N [.Adj pretty ] [.N tree ] ] ]
+
+\newpage
 
 \subsection{Formatting}
 
+Doing the entire tree in one line can get pretty messy. Even that short phrase 
+is a little cluttered. Luckily, \LaTeX\ ignores any extra whitespace in a tree,
+so you can break it up across lines and indent it to make it a lot more readable.
 
+Take the following example using ``a prettier tree'':
+
+\begin{verbatim}
+\Tree [.NP 
+         [.Det a ] 
+         [.N 
+            [.Adj prettier ] 
+            [.N tree ] 
+         ] 
+      ]
+\end{verbatim}
+
+Looks like:
+
+\Tree [.NP 
+			[.Det a ] 
+			[.N 
+				[.Adj prettier ] 
+				[.N tree ] 
+			] 
+		]
+
+\subsection{Bar notation}
+
+To use X-bar notation, everything is more or less the same, but you use ``\textbackslash 1'' for the prime mark.
+
+\begin{verbatim}
+\Tree [.NP 
+         [.DetP
+            [.Det\1
+               [.Det the ]
+            ]
+         ] 
+         [.N\1 
+            [.AdjP
+               [.Adj\1
+                  [.Adj prettiest ]
+               ]
+            ]
+            [.N tree ] 
+         ] 
+      ]
+\end{verbatim}
+
+Looks like:
+
+\Tree [.NP 
+         [.DetP
+            [.Det\1
+               [.Det the ]
+            ]
+         ] 
+         [.N\1 
+            [.AdjP
+               [.Adj\1
+                  [.Adj prettiest ]
+               ]
+            ]
+            [.N tree ] 
+         ] 
+      ]
 
 \end{document}
