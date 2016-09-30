@@ -1,0 +1,56 @@
+\documentclass{article}
+
+\usepackage[margin=0.75in]{geometry}
+\usepackage{qtree}
+\qtreeprimes
+
+\title{Syntax Trees in \LaTeX\ }
+\date{}
+\author{Rachael Steiner}
+
+\begin{document}
+\maketitle
+
+This tutorial will show you how to make syntax trees using \LaTeX\ . It will assume you either know 
+very basic \LaTeX\ (such as how to format a document) or can find out.
+
+\section{Getting started}
+
+To begin, you will need to use the package \textbf{qtree}. Include in your preamble:
+
+\begin{verbatim}
+	\usepackage{qtree}
+\end{verbatim}
+
+If you plan on using prime notation (e.g., for X-bar trees), also include the line:
+
+\begin{verbatim}
+	\qtreeprimes
+\end{verbatim}
+
+\section{The trees}
+
+Start a tree with the command
+
+\begin{verbatim}
+	\Tree
+\end{verbatim}
+
+Trees are written in bracket notation. You can denote a node label by preceding 
+it with a period. Any other text is taken to be the end of the branch.
+
+\subsection{Example}
+
+Take, for example, the phrase "the pretty tree":
+
+\begin{verbatim}
+	\Tree [.NP [.Det the ] [.N [.Adj pretty ] [.N tree ] ] ]
+\end{verbatim}
+
+\Tree [.NP [.Det the ] [.N [.Adj pretty ] [.N tree ] ] ]
+
+\subsection{Formatting}
+
+
+
+\end{document}
